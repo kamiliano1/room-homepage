@@ -24,6 +24,13 @@ module.exports = {
         "4xl": ["2.17rem", "2.5rem"],
         sm: ["0.9125rem" , "1.125rem"]
       },
+      gridTemplateColumns:
+      {
+        '20/80': '30% 30% 10% 30%',
+      },
+      gridTemplateRows: {
+        '67/33' : '50% 33%'
+      },
       height: {
         320: "max(320px, 40vh)"
 

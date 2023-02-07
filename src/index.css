@@ -54,3 +54,37 @@ p {
   background-position: bottom left;
   background-size: cover;
 }
+
+.primary-navigation {
+  animation: closeNavbar 1s
+
+}
+/* 
+.primary-navigation[aria-expanded="true"] {
+  animation: openNavbar 1s
+}
+
+
+
+@keyframes openNavbar{
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% {
+      transform: translateX(0%);
+  }
+}
+@keyframes closeNavbar{
+  0% {
+      transform: translateX(0%);
+  }
+
+  100% {
+      transform: translateX(100%);
+  }
+}  */
+
+.opened-navigation {
+  transform: translateX(0);
+}
