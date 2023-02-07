@@ -17,6 +17,7 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+  font-size: min();
 }
 a {
   @apply text-sm font-700
@@ -27,7 +28,7 @@ article {
 }
 
 p {
-  @apply max-h-[50ch]
+  @apply max-w-[50ch]
 }
 
 .indicators > * {

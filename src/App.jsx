@@ -48,18 +48,18 @@ function App() {
   }
 
   return (
-    <div className='container mx-auto'>
+    <div className='max-w-[1440px] mx-auto px-9'>
       <div className={isActive?  "nav-activated" : ""}></div>
 
-    <div className="h-screen sm:grid sm:grid-rows-67/33 sm:grid-cols-20/80 " >
+    <div className="h-screen sm:grid sm:grid-rows-67/33 sm:grid-cols-20/80  bg-gray-500 " >
 
     {/* <div className="logo col-span-2 bg-[url('/images/mobile-image-hero-1.jpg')] bg-no-repeat bg-cover h-320 bg-left-bottom relative "> */}
-    <div className="hero-img col-span-2 bg-left-bottom relative bg-no-repeat  bg-cover"style={styles}>
+    <div className="hero-img col-span-2 row-span-2 bg-left-bottom relative bg-no-repeat  bg-cover"style={styles}>
     {/* <div className="logo col-span-2 bg-no-repeat bg-cover h-320 bg-left-bottom relative "> */}
-      <div className='flex absolute bottom-0 right-0'>
+      {/* <div className=' flex absolute bottom-0 right-0'>
   <button onClick={previousArticle}><img className='bg-black px-5 py-4' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
   <button onClick={nextArticle}><img className='bg-black px-5 py-4' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
-</div>
+</div> */}
 <div className='ml-[4rem] mt-[2rem]'>
       <Navbar 
       toggleNav={toggleNav}
@@ -68,16 +68,20 @@ function App() {
 
 </div>
       </div>
-      <article className="col-span-2 self-center px-32">
+      <article className="col-span-2 px-cl flex flex-col justify-center">
         <h1 className='font-700 text-4xl'>{articleData[currentArticle].title}</h1>  
         <p className='text-darkGrey py-7 text-sm'>{articleData[currentArticle].description}</p>
 <button className='flex items-center gap-6 uppercase tracking-[.6rem]'>Shop Now <img src="/images/icon-arrow.svg" alt="arrow icon" /></button>
 
 </article>
-<div className=''>
+<div className='row-start-2 col-start-3'>
+  <button className='' onClick={previousArticle}><img className='bg-black h-full aspect-square' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
+  <button onClick={nextArticle}><img className='bg-black aspect-square h-full ' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
+</div>
+<div className='row-start-3'>
   <img src="/images/image-about-dark.jpg" alt="dark chairs near the table" />
 </div>
-<article className=' col-span-2 '>  
+<article className='row-start-3 col-start-2 col-span-2 justify-self-center'>  
 <h2 className='uppercase tracking-[.27rem] font-700 text-small'>About our furniture</h2>
 
 <p className='text-darkGrey pt-5 text-sm'>Our multifunctional collection blends design and function to suit your individual taste.
@@ -85,7 +89,7 @@ Make each room unique, or pick a cohesive theme that best express your interests
 inspires you. Find the furniture pieces you need, from traditional to contemporary styles
 or anything in between. Product specialists are available to help you create your dream space.</p> 
 </article>
-<div> <img src="/images/image-about-light.jpg" className='w-[700px]' alt="white chair" /></div>
+<div className='row-start-3'> <img src="/images/image-about-light.jpg" className='w-[700px]' alt="white chair" /></div>
     </div>
 
     </div>

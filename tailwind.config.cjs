@@ -29,11 +29,14 @@ module.exports = {
         '20/80': '30% 30% 10% 30%',
       },
       gridTemplateRows: {
-        '67/33' : '50% 33%'
+        '67/33' : 'minmax(300px, 535px) minmax(40px, 90px) 240px'
       },
       height: {
         320: "max(320px, 40vh)"
-
+      },
+      padding: {
+        cl: "clamp(1rem, 5vw, 4rem)"
+        // cl: "5vw"
       }
     },
   },
