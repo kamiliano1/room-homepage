@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // screens: {
+    //   'sm': '900px',
+    // },
     extend: {
+
       colors: {
         darkGrey: "hsl(0, 0%, 63%)",
         black: "hsl(0, 0%, 0%)",
@@ -26,10 +30,11 @@ module.exports = {
       },
       gridTemplateColumns:
       {
-        '20/80': '30% 30% 10% 30%',
+        // '20/80': '30% 30% 10% 30%',
+        '20/80': "3fr 3fr max-content 3fr",
       },
       gridTemplateRows: {
-        '67/33' : 'minmax(300px, 535px) minmax(40px, 90px) 240px'
+        '67/33' : 'minmax(300px, 535px) 80px minmax(120px, 240px)'
       },
       height: {
         320: "max(320px, 40vh)"

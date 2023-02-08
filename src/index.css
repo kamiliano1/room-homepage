@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -32,7 +33,7 @@ p {
 }
 
 .indicators > * {
-  @apply cursor-pointer p-2 relative font-600
+  @apply cursor-pointer py-2 relative font-600
 }
 
 
@@ -42,8 +43,8 @@ p {
 
 .opened-navigation {
   /* background-color: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); */
-  background-color: black;
-  opacity: 0.5;
+  /* background-color: black; */
+  /* opacity: 0.5; */
 }
 
 .hero-img {
@@ -59,6 +60,6 @@ p {
   transition: transform 500ms ease-in-out;
 }
 
-.nav-opened  {
+[aria-expanded="true"]  {
   transform: translateX(0%);
 }
