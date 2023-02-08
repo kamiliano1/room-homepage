@@ -40,13 +40,10 @@ p {
   @apply w-3/6 h-0.5 bg-white bottom-0 left-1/4 absolute content-[""];
 }
 
-.nav-activated {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(0,0,0,0.6);
+.opened-navigation {
+  /* background-color: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); */
+  background-color: black;
+  opacity: 0.5;
 }
 
 .hero-img {
@@ -56,36 +53,12 @@ p {
   background-size: cover;
 }
 
+
 .primary-navigation {
-  animation: closeNavbar 1s
-
-}
-/* 
-.primary-navigation[aria-expanded="true"] {
-  animation: openNavbar 1s
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  transition: transform 500ms ease-in-out;
 }
 
-
-
-@keyframes openNavbar{
-  0% {
-      transform: translateX(100%);
-  }
-
-  100% {
-      transform: translateX(0%);
-  }
-}
-@keyframes closeNavbar{
-  0% {
-      transform: translateX(0%);
-  }
-
-  100% {
-      transform: translateX(100%);
-  }
-}  */
-
-.opened-navigation {
-  transform: translateX(0);
+.nav-opened  {
+  transform: translateX(0%);
 }

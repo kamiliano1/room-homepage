@@ -43,24 +43,22 @@ function App() {
     setIsActive(prev=>!prev)
   }
 
-  const styles = {
-    backgroundImage: isActive ? "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/mobile-image-hero-1.jpg')" : `url('/images/desktop-image-hero-${currentArticle+1}.jpg')`
-  }
+
 
   return (
-    <div className='max-w-[1440px] mx-auto px-9'>
+    <div className='max-w-[1440px] mx-auto md:px-9'>
       <div className={isActive?  "nav-activated" : ""}></div>
 
-    <div className="h-screen sm:grid sm:grid-rows-67/33 sm:grid-cols-20/80  bg-gray-500 " >
+    <div className="h-screen sm:grid sm:grid-rows-67/33 sm:grid-cols-20/80   " >
 
-    {/* <div className="logo col-span-2 bg-[url('/images/mobile-image-hero-1.jpg')] bg-no-repeat bg-cover h-320 bg-left-bottom relative "> */}
-    <div className="hero-img col-span-2 row-span-2 bg-left-bottom relative bg-no-repeat  bg-cover"style={styles}>
+    <div className="logo col-span-2 bg-[url('/images/mobile-image-hero-1.jpg')] bg-no-repeat bg-cover h-320 bg-left-bottom relative ">
+    {/* <div className="hero-img col-span-2 row-span-2 bg-left-bottom relative bg-no-repeat  bg-cover"> */}
     {/* <div className="logo col-span-2 bg-no-repeat bg-cover h-320 bg-left-bottom relative "> */}
       {/* <div className=' flex absolute bottom-0 right-0'>
   <button onClick={previousArticle}><img className='bg-black px-5 py-4' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
   <button onClick={nextArticle}><img className='bg-black px-5 py-4' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
 </div> */}
-<div className='ml-[4rem] mt-[2rem]'>
+<div className=''>
       <Navbar 
       toggleNav={toggleNav}
       isActive={isActive}
@@ -78,8 +76,9 @@ function App() {
   <button className='' onClick={previousArticle}><img className='bg-black h-full aspect-square' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
   <button onClick={nextArticle}><img className='bg-black aspect-square h-full ' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
 </div>
-<div className='row-start-3'>
-  <img src="/images/image-about-dark.jpg" alt="dark chairs near the table" />
+<div className='row-start-3 max-w-[700px]'>
+  <img src="/images/image-about-dark.jpg" 
+  className='w-[100%]' alt="dark chairs near the table" />
 </div>
 <article className='row-start-3 col-start-2 col-span-2 justify-self-center'>  
 <h2 className='uppercase tracking-[.27rem] font-700 text-small'>About our furniture</h2>
@@ -89,7 +88,7 @@ Make each room unique, or pick a cohesive theme that best express your interests
 inspires you. Find the furniture pieces you need, from traditional to contemporary styles
 or anything in between. Product specialists are available to help you create your dream space.</p> 
 </article>
-<div className='row-start-3'> <img src="/images/image-about-light.jpg" className='w-[700px]' alt="white chair" /></div>
+<div className='row-start-3 max-w-[700px]'> <img src="/images/image-about-light.jpg" className='w-[100%]' alt="white chair" /></div>
     </div>
 
     </div>
