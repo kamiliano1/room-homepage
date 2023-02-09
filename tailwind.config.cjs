@@ -9,6 +9,9 @@ module.exports = {
     //   'sm': '900px',
     // },
     extend: {
+      screens: {
+        'lg': '1024px',
+      },
 
       colors: {
         darkGrey: "hsl(0, 0%, 63%)",
@@ -34,7 +37,7 @@ module.exports = {
         '20/80': "3fr 3fr max-content 3fr",
       },
       gridTemplateRows: {
-        '67/33' : 'minmax(300px, 535px) 80px minmax(120px, 240px)'
+        '67/33' : 'minmax(300px, 535px) 80px min(30vw, 250px)'
       },
       height: {
         320: "max(320px, 40vh)"

@@ -4,6 +4,7 @@ function App() {
   const [isActive, setIsActive] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [currentArticle, setCurrentArticle] = useState(0)
+  const [currentSize, setCurrentSize] = useState(null) 
 
   useEffect(() => {
     function handleWindowResize() {
@@ -18,32 +19,45 @@ function App() {
 
   useEffect(()=>{
     windowWidth>650 ? setIsActive(false) : ""
+    windowWidth>650 ? setCurrentSize("desktop") : setCurrentSize("mobile")
 
   },[windowWidth])
-
   const articleData = [
     {
       id:1,
       title: "Discover innovative ways to decorate",
       description: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
-      picture:""
+      picture:{
+        desktop: "images/desktop-image-hero-1.jpg",
+        mobile: "images/mobile-image-hero-1.jpg",
+      },
     },
     {
       id:2,
       title: " We are available all across the globe",
       description:"With stores all over the world, it's easy for you to find furniture for your home or place of business.Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
-      picture:""
+      picture:{
+        desktop: "/images/desktop-image-hero-2.jpg",
+        mobile: "/images/mobile-image-hero-2.jpg",
+      },
     },
     {
       id:3,
       title: "Manufactured with the best materials",
       description: "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
-      picture:""
+      picture:{
+        desktop: "/images/desktop-image-hero-3.jpg",
+        mobile: "/images/mobile-image-hero-3.jpg",
+      },
     },
   ]
-
+  const styles = {
+  backgroundImage : currentSize === "desktop" ? `url(${articleData[currentArticle].picture.desktop})`
+  : `url(${articleData[currentArticle].picture.mobile})`,
+  }
   function nextArticle() {
     setCurrentArticle(prev=>{
+      console.log(styles)
       return prev === articleData.length-1 ? prev = 0 : prev+1
     })
   }
@@ -65,9 +79,7 @@ function App() {
 
 
       {/* Głowne */}
-        <div className={`col-span-2 row-span-2 bg-[url("/images/mobile-image-hero-${currentArticle}.jpg")] bg-no-repeat bg-cover h-320 bg-center-left
-         bg-slate-500 relative sm:h-full sm:bg-[url('/images/desktop-image-hero-${currentArticle+1}.jpg')]
-        `}>
+        <div style={styles} className={`col-span-2 row-span-2 bg-no-repeat bg-cover h-320 bg-center-left bg-slate-500 relative sm:h-full`}>
           <Navbar 
             toggleNav={toggleNav}
             isActive={isActive}
@@ -103,7 +115,7 @@ function App() {
 
 
         {/* Staly artykul */}
-        <article className='row-start-3 col-start-2 col-span-2 justify-self-center'>  
+        <article className='row-start-3 col-start-2 col-span-2 flex flex-col  justify-center mx-auto px-6'>  
         <h2 className='uppercase tracking-[.27rem] font-700 text-small'>About our furniture</h2>
 
         <p className='text-darkGrey pt-5 text-sm'>Our multifunctional collection blends design and function to suit your individual taste.

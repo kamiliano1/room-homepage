@@ -24,9 +24,6 @@ a {
   @apply text-sm font-700
 }
 
-article {
-  @apply py-11 px-5
-}
 
 p {
   @apply max-w-[50ch]
