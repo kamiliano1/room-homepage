@@ -5,11 +5,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // screens: {
-    //   'sm': '900px',
-    // },
     extend: {
       screens: {
+        'sm': "704px",
         'lg': '1024px',
       },
 
@@ -31,20 +29,20 @@ module.exports = {
         "4xl": ["2.17rem", "2.5rem"],
         sm: ["0.9125rem" , "1.125rem"]
       },
-      gridTemplateColumns:
-      {
-        // '20/80': '30% 30% 10% 30%',
-        '20/80': "3fr 3fr max-content 3fr",
+      gridTemplateColumns: {
+        'midScreen': "1fr 1fr 1fr 1fr",
+        'bigScreen': "3fr 3fr max-content 3fr",
       },
       gridTemplateRows: {
-        '67/33' : 'minmax(300px, 535px) 80px min(30vw, 250px)'
+        'midScreen' : 'minmax(300px, 435px) 80px min(30vw, 250px) min(30vw, 250px)',
+        'bigScreen' : 'minmax(300px, 435px) 80px min(30vw, 250px)'
       },
       height: {
-        320: "max(320px, 40vh)"
+        320: "max(320px, 30vh)"
       },
       padding: {
-        cl: "clamp(1rem, 5vw, 4rem)"
-        // cl: "5vw"
+        cl: "clamp(1rem, 25vw, 3rem)",
+        cl2: "clamp(5rem, 15vw, 4rem)"
       }
     },
   },
