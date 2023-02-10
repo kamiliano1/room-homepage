@@ -20,40 +20,20 @@ html {
   border: 0;
   font-size: min();
 }
-a {
-  @apply text-sm font-700
-}
 
-
-p {
-  @apply max-w-[50ch]
-}
 
 .indicators > * {
   @apply cursor-pointer py-2 relative font-600
 }
-
-
 .indicators > *:hover::before {
   @apply w-3/6 h-0.5 bg-white bottom-0 left-1/4 absolute content-[""];
 }
-
-.opened-navigation {
-  /* background-color: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); */
-  /* background-color: black; */
-  /* opacity: 0.5; */
-}
-
-.hero-img {
-  /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/mobile-image-hero-1.jpg'); */
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: cover;
-}
-
+article {
+  @apply flex flex-col justify-center px-5 py-10 max-w-[400px] mx-auto
+} 
 
 .primary-navigation {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   transition: transform 500ms ease-in-out;
 }
 
