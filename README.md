@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/kamiliano1/room-homepage](https://github.com/kamiliano1/room-homepage)
-- Live Site URL: [https://unrivaled-florentine-39f82f.netlify.app/](https://unrivaled-florentine-39f82f.netlify.app/)
+- Live Site URL: [https://cool-sfogliatella-71873b.netlify.app/](hhttps://cool-sfogliatella-71873b.netlify.app/)
 
 ## My process
 
