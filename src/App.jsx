@@ -46,7 +46,7 @@ function App() {
   }
 
   return (
-    <div className='max-w-[1440px] mx-auto sm:py-11 '>
+    <div className='max-w-[1440px] mx-auto sm:p-5 '>
       <div className="h-screen sm:grid sm:grid-rows-midScreen sm:grid-cols-midScreen lg:grid-cols-bigScreen lg:grid-rows-bigScreen" >
         <div style={styles} className={`col-span-2 row-span-2 bg-no-repeat bg-cover h-320 bg-bottom bg-slate-500 relative sm:h-full`}>
           <Navbar 
