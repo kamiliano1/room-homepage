@@ -55,8 +55,8 @@ function App() {
             currentWidth={windowWidth}
           />
           <div className='absolute -bottom-2 right-0 sm:hidden'>
-            <button className='' onClick={previousArticle}><img className='bg-black px-4 py-3' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
-            <button className='' onClick={nextArticle}><img className='bg-black px-4 py-3' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
+            <button className='' onClick={previousArticle}><img className='bg-black px-4 py-3' src="/images/icon-angle-left.svg" /><p className='sr-only'>Left Arrow</p></button>
+            <button className='' onClick={nextArticle}><img className='bg-black px-4 py-3' src="/images/icon-angle-right.svg" /><p className='sr-only'>Right Arrow</p></button>
           </div>
        </div>
 
@@ -69,8 +69,8 @@ function App() {
         </article>
 
         <div className='col-start-3 row-start-2 hidden  sm:flex'>
-          <button className='' onClick={previousArticle}><img className='bg-black hover:bg-black/60 aspect-square h-full p-7' src="/images/icon-angle-left.svg" alt="left arrow" /><p className='sr-only'>Left Arrow</p></button>
-          <button onClick={nextArticle}><img className='bg-black hover:bg-black/60 aspect-square  h-full p-7' src="/images/icon-angle-right.svg" alt="right arrow" /><p className='sr-only'>Right Arrow</p></button>
+          <button className='' onClick={previousArticle}><img className='bg-black hover:bg-black/60 aspect-square h-full p-7' src="/images/icon-angle-left.svg" /><p className='sr-only'>Left Arrow</p></button>
+          <button onClick={nextArticle}><img className='bg-black hover:bg-black/60 aspect-square  h-full p-7' src="/images/icon-angle-right.svg" /><p className='sr-only'>Right Arrow</p></button>
         </div>
 
         <div className='row-start-4 col-span-2 lg:row-start-3 lg:col-span-1 lg:col-start-1 max-w-[700px]'>

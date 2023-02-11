@@ -13,10 +13,10 @@ export default function Navbar(props) {
 
             {props.currentWidth>703 &&
                 <ul className="indicators flex text-white gap-5 sm:self-start sm:mt-3 lg:mt-0">
-                    <li><a href="#" aria-selected="true">Home</a></li>
-                    <li><a href="#" aria-selected="false">Shop</a></li>
-                    <li><a href="#" aria-selected="false">About</a></li>
-                    <li><a href="#" aria-selected="false">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             }
             <div className={`primary-navigation ${navClass} z-10 fixed left-0 right-0 top-0 bottom-0 bg-black translate-x-full`}aria-expanded={props.isActive}>
@@ -26,10 +26,10 @@ export default function Navbar(props) {
                         <img src={`./images/icon-close.svg`} alt="menu logo" />
                     </button>
                     <ul className="flex gap-5">
-                        <li><a href="#" aria-selected="true">Home</a></li>
-                        <li><a href="#" aria-selected="false">Shop</a></li>
-                        <li><a href="#" aria-selected="false">About</a></li>
-                        <li><a href="#" aria-selected="false">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>

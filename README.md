@@ -59,7 +59,7 @@ gridTemplateRows: {
 },
 ```
 
-During resizing page from big to small last row of the grid acting weird and I added another media query. It work better that before but still it has white spaces but I could't figured out another way to solve this problem.
+During resizing the page from big to small last row of the grid acted weird and I added another media query. It work better than before but still it has white spaces but I couldn't figured out another way to solve this problem.
 
 ## Author
 
